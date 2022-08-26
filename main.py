@@ -5,8 +5,7 @@ from time import sleep
 root = Tk()
 root.title("Simple Calculator")
 
-#--------------COLOUR--------------
-
+#Colour settings
 main_colour = "#faf3f2"
 second_colour = "#b5aeae"
 text_colour = "white"
@@ -14,7 +13,7 @@ root.config(bg=main_colour)
 
 
 
-#making a text area at the top and setting its place on the screen
+#making a text areas and setting its place on the screen
 e = Entry(root, width=35, borderwidth=2)
 e.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
 
@@ -24,10 +23,10 @@ ee.grid(row=1, column=4, columnspan=3, padx=10, pady=10)
 eee = Entry(root, width=35, borderwidth=2)
 eee.grid(row=2, column=4, columnspan=3, padx=10, pady=10)
 eee.grid(row=3, column=2, columnspan=3, padx=10, pady=10)
-#e.insert(0, "")
 
+
+#Function that runs spam code when button is pressed
 def start_button():
-    #FIND WAY TO CHANGE STRING TO INT IN A WAY THAT FUCKING WORKS
     currentmes = e.get()
     currentnum = ee.get()
     currentnuminter = eee.get()
@@ -50,7 +49,7 @@ def start_button():
 def exit_button():
     root.destroy()
 
-
+#establishing wigets on screen
 messagenum_text = Label(root,text = "Number of Messages", font='Helvetica 12 bold')
 message_text = Label(root,text = "Message",font='Helvetica 12 bold')
 messageinter = Label(root,text = "Message Interval",font='Helvetica 12 bold')
@@ -60,8 +59,8 @@ start = Button(root, text="Start", padx=50, pady=15,bg=second_colour, command=la
 exit = Button(root, text="Exit", padx=50, pady=15,bg=second_colour, command=lambda: exit_button())
 
 
-#put buttons on scrn
 
+#Establiishing wigets location on screen
 message_text.grid(row=0,column=0, columnspan=3)
 messagenum_text.grid(row=0,column=4, columnspan=3)
 
