@@ -3,7 +3,8 @@ import pyautogui as pg
 from time import sleep
 
 root = Tk()
-root.title("Simple Calculator")
+root.title("Spamz")
+root.iconbitmap("Spam.ico")
 
 #Colour settings
 main_colour = "#faf3f2"
